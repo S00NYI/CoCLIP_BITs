@@ -140,7 +140,7 @@ colnames(genes.bed.ext) = c("chr", "start", "end", "name", "score", "strand")
 genes.ext.gr = GRanges(seqnames=genes.bed.ext$chr, ranges=IRanges(start=genes.bed.ext$start, end=genes.bed.ext$end, names=genes.bed.ext$name), strand=genes.bed.ext$strand) 
 
 ## Load peak file:
-peaksMatrix_PATH = '/Users/soonyi/Desktop/Genomics/CoCLIP/Analysis/'
+peaksMatrix_PATH = '~/Desktop/Genomics/CoCLIP/Analysis/'
 peaksMatrix_FILE = 'Combined_peakCoverage_groomed.txt'
 peaksMatrix = read.delim(paste0(peaksMatrix_PATH, peaksMatrix_FILE), header = TRUE, sep = "\t")
 peaksMatrix = peaksMatrix %>% mutate(chr = ifelse(chr == "chrM", "chrMT", chr))

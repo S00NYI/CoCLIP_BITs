@@ -320,7 +320,7 @@ colnames(INTRONs) = c('transcript_id', 'start', 'end', 'seqid', 'strand', 'intro
 
 # Read in the peaks and filters to be used:
 ####################################################################################################################
-peakFile = '/Users/soonyi/Desktop/Genomics/CoCLIP/Analysis/Combined_peakCoverage_groomed_annotated.txt'
+peakFile = '~/Desktop/Genomics/CoCLIP/Analysis/Combined_peakCoverage_groomed_annotated.txt'
 peaks_org = read.delim(peakFile, header=TRUE, sep="\t")
 
 NLS_I_M = c('NLS_I_M_1', 'NLS_I_M_2')

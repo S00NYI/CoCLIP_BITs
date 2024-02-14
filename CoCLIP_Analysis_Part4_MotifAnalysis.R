@@ -187,7 +187,7 @@ plot_CD = function(count_table, y_data, colormaps, linetypes, linesize) {
 
 ## Load peak matrix and clean up:
 ####################################################################################################################
-peaksMatrix_PATH = '/Users/soonyi/Desktop/Genomics/CoCLIP/Analysis/'
+peaksMatrix_PATH = '~/Desktop/Genomics/CoCLIP/Analysis/'
 peaksMatrix_FILE = 'Combined_peakCoverage_groomed_normalized_annotated.txt'
 
 peaksMatrix = read_delim(paste0(peaksMatrix_PATH, peaksMatrix_FILE), show_col_types = FALSE)
@@ -347,7 +347,7 @@ for (sample in Samples) {
 
 ## Do the same for eCLIP peaks:
 ####################################################################################################################
-eCLIP = read.delim('/Users/soonyi/Desktop/Genomics/CoCLIP/Analysis/motifEnrichment/eCLIP_bed/ELAVL1_eCLIP_ENCFF566LNK.bed', header = F)
+eCLIP = read.delim('~/Desktop/Genomics/CoCLIP/Analysis/motifEnrichment/eCLIP_bed/ELAVL1_eCLIP_ENCFF566LNK.bed', header = F)
 eCLIP = eCLIP[, c('V1', 'V2', 'V3', 'V4', 'V6')]
 colnames(eCLIP) = c('chrom', 'start', 'end', 'name', 'strand')
 eCLIP = eCLIP %>% filter(chrom %in% c('chr1', 'chr2', 'chr3', 'chr4', 'chr5', 'chr6', 'chr7', 'chr8', 'chr9', 'chr10', 'chr11', 'chr12', 'chr13', 'chr14', 'chr15', 'chr16', 'chr17', 'chr18', 'chr19', 'chr20', 'chr21', 'chr22', 'chrX', 'chrY', 'chrM'))
@@ -416,7 +416,7 @@ pheatmap(motif_ranks[, col_selection], cluster_rows=F, cluster_cols=F, color = r
 
 ## FIGURE4 Read motif density calculations:
 ################################################################################
-baseDir = '/Users/soonyi/Desktop/Genomics/CoCLIP/Analysis/motifEnrichment/motifs/density'
+baseDir = '~/Desktop/Genomics/CoCLIP/Analysis/motifEnrichment/motifs/density'
 setwd(baseDir)
 
 densityFiles = list.files(paste0(baseDir))

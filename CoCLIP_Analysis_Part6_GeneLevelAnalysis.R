@@ -37,7 +37,7 @@ filterPeakMatrix = function(peak_matrix, sample_list, info_columns, BC_criteria,
 
 ## Load peak matrix and clean up:
 ####################################################################################################################
-peaksMatrix_PATH = '/Users/soonyi/Desktop/Genomics/CoCLIP/Analysis/'
+peaksMatrix_PATH = '~/Desktop/Genomics/CoCLIP/Analysis/'
 peaksMatrix_FILE = 'Combined_peakCoverage_groomed_normalized_annotated.txt'
 
 peaksMatrix = read_delim(paste0(peaksMatrix_PATH, peaksMatrix_FILE), show_col_types = FALSE)
@@ -432,7 +432,7 @@ Gene_Co_G3BP_SvNES_S = Gene_Co_G3BP_SvNES_S %>% mutate(log2FoldChange = log2(Gen
 ## RNASeq Fold Changes:
 ####################################################################################################################
 ## Read in DESeq results:
-RNASeq_PATH = '/Users/soonyi/Desktop/Genomics/RNASeq/RNASeq_APEXCellLines/V43/'
+RNASeq_PATH = '~/Desktop/Genomics/RNASeq/RNASeq_APEXCellLines/V43/'
 RNASeq_FILE_All = 'All_DESeq.tsv'
 RNASeq_FILE_Nuclear = 'Nuclear_DESeq.tsv'
 RNASeq_FILE_Cytoplasm = 'Cytoplasm_DESeq.tsv'
@@ -558,7 +558,7 @@ ggplot(plotData, aes(x = RNASeq, y = CoCLIP)) +
 ## Supplement: RNASeq Internal Comparison
 ####################################################################################################################
 ## Read RNASeq count table and process it:
-RNASeq_PATH = '/Users/soonyi/Desktop/Genomics/RNASeq/RNASeq_APEXCelllines/V43/'
+RNASeq_PATH = '~/Desktop/Genomics/RNASeq/RNASeq_APEXCelllines/V43/'
 RNASeq_FILE = 'countTable.csv'
 
 RNASeq = read_delim(paste0(RNASeq_PATH, RNASeq_FILE), show_col_types = FALSE)
@@ -880,9 +880,9 @@ wilcox.test(plotData[plotData$sample_source == 'S_SGranule', ]$transcript_length
 
 ## Load gene sets for GSEA:
 ####################################################################################################################
-H_SET_GMT = gmtPathways('/Users/soonyi/Desktop/Genomics/Annotations/GSEA/h.all.v2023.1.Hs.symbols.gmt')
-C2_SET_GMT = gmtPathways('/Users/soonyi/Desktop/Genomics/Annotations/GSEA/c2.all.v2023.1.Hs.symbols.gmt')
-C5_SET_GMT = gmtPathways('/Users/soonyi/Desktop/Genomics/Annotations/GSEA/c5.all.v2023.1.Hs.symbols.gmt')
+H_SET_GMT = gmtPathways('~/Desktop/Genomics/Annotations/GSEA/h.all.v2023.1.Hs.symbols.gmt')
+C2_SET_GMT = gmtPathways('~/Desktop/Genomics/Annotations/GSEA/c2.all.v2023.1.Hs.symbols.gmt')
+C5_SET_GMT = gmtPathways('~/Desktop/Genomics/Annotations/GSEA/c5.all.v2023.1.Hs.symbols.gmt')
 ####################################################################################################################
 
 ## Make Gene Enrichment Table for GSEA:
